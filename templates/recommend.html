@@ -30,18 +30,26 @@
             <div class = "row">
                 <div class = "col-md-12">
                     <h2 class = " text-white">Recommend Books</h2>
+                    <form action = "/recommend_books" method = "post">
+                        <input name = "user_input" type = "text" class = "form-control"><br>
+                        <input type = "submit" class = "btn btn-success" value = "Recommend">
                 </div>
 
-                <div class="col-md-3" style ="margin-top:30px">
-                    <div class="card">
-                        <div class="card-body">
-                            <img class = "card-body" src = 'http://images.amazon.com/images/P/0439136350.01.THUMBZZZ.jpg' >
-                            <p class = "text-white"> afsdf </p>                           
-                            <p class = "text-white">asdasd</p>
+                {% if data %}
+                    {% for i in data %}
+                        <div class="col-md-3" style ="margin-top:30px">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img class = "card-body" src = {{i[2]}} >
+                                    <p class = "text-white"> {{i[1]}} </p>                           
+                                    <p class = "text-white"> {{i[0]}} </p>
+                                    
+                                </div>    
+                            </div>    
+                        </div>
+                    {% endfor %}
+                {% endif %}
                             
-                        </div>    
-                    </div>    
-                </div>            
                     
             </div>
         </div>
