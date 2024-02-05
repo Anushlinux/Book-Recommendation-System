@@ -18,9 +18,8 @@
         <a class = "navbar-brand">My Book Recommender System</a> 
         <ul class = "nav">
             <div class="topnav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/Recommend">Recommender</a></li>
-                
+                <li><a href="/"> Home </a></li>
+                <li><a href="/Recommend"> Recommender </a></li>                
             </div> 
             
         </ul>    
@@ -30,25 +29,20 @@
         <div class = "container">
             <div class = "row">
                 <div class = "col-md-12">
-                    <h1 class = " text-white">Welcome to My Book Recommender System</h1>
-                    <h2 class = " text-white">Top 50 Books</h2>
+                    <h2 class = " text-white">Recommend Books</h2>
                 </div>
 
-                {% for i in range(book_name | length)%}
                 <div class="col-md-3" style ="margin-top:30px">
                     <div class="card">
                         <div class="card-body">
-                            <img class = "card-body" src = {{ image[i] }} >
-                            <p class = "text-white"> {{ book_name[i] }} </p>
-                            <p class = "text-white">{{ rating[i] }}</p>
-                            <p class = "text-white">{{ author[i] }}</p>
-                            <p class = "text-white">{{ votes[i] }}</p>
+                            <img class = "card-body" src = 'http://images.amazon.com/images/P/0439136350.01.THUMBZZZ.jpg' >
+                            <p class = "text-white"> afsdf </p>                           
+                            <p class = "text-white">asdasd</p>
+                            
                         </div>    
                     </div>    
-                </div>  
-                
-                {% endfor%}
-
+                </div>            
+                    
             </div>
         </div>
     </div>    
