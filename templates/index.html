@@ -15,7 +15,7 @@
 
 <body style = "background-color: black">
     <nav class = "navbar" style ="background-color:#00a65a">
-        <a class = "navbar-brand">My Book Recommender System</a> 
+        <a class = "navbar-brand"> My Book Recommender System </a> 
         <ul class = "nav">
             <div class="topnav">
                 <li><a href="/">Home</a></li>
@@ -35,14 +35,14 @@
                 </div>
 
                 {% for i in range(book_name | length)%}
-                <div class="col-md-3" style ="margin-top:30px">
+                <div class="col-md-3" style ="margin-top:50px">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" style = "background-color: black">
                             <img class = "card-body" src = {{ image[i] }} >
-                            <p class = "text-white"> {{ book_name[i] }} </p>
-                            <p class = "text-white">{{ rating[i] }}</p>
-                            <p class = "text-white">{{ author[i] }}</p>
-                            <p class = "text-white">{{ votes[i] }}</p>
+                            <p style = "color:white"> {{ book_name[i] }} </p>
+                            <p style = "color:white">{{ rating[i] }}</p>
+                            <p style = "color:white">{{ author[i] }}</p>
+                            <p style = "color:white">{{ votes[i] }}</p>
                         </div>    
                     </div>    
                 </div>  
